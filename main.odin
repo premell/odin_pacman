@@ -13,6 +13,7 @@ import "core:image/png"
 import gl "vendor:OpenGL"
 import SDL "vendor:sdl2"
 
+import image "vendor:sdl2/image"
 
 BLOCK_COUNT_WIDTH :: 80
 BLOCK_COUNT_HEIGHT :: 45
@@ -279,3 +280,8 @@ get_block_up::proc(current_position: [2]int) -> BLOCK_TYPE {
 get_block_down::proc(current_position: [2]int) -> BLOCK_TYPE {
   return current_position[1] == BLOCK_COUNT_HEIGHT - 1 ? BLOCK_TYPE.wall : world_state.blocks[current_position[1]*BLOCK_COUNT_WIDTH + current_position[0] + BLOCK_COUNT_WIDTH]
 }
+
+
+
+
+
